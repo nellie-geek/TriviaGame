@@ -1,0 +1,23 @@
+#contatiner {
+    background: rgb(236, 234, 234);
+}
+
+.btn {
+    color: aliceblue;
+    background: rgb(93, 48, 134);
+}
+
+img {
+    max-height: 250px;
+    width: auto;
+  }
+  
+#answer {
+    text-align: center;
+  
+  }
+  
+#question {
+    text-align: center;
+    font-weight: bold;
+  }
