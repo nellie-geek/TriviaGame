@@ -5,6 +5,12 @@
 #start-button {
   color: aliceblue;
   background: rgb(93, 48, 134);
+  border: 0px;
+}
+
+#reset {
+  color: aliceblue;
+  background: rgb(93, 48, 134);
 }
 
 img {
