@@ -1,23 +1,35 @@
-#contatiner {
-    background: rgb(236, 234, 234);
+#container {
+  background: rgb(236, 234, 234);
 }
 
-.btn {
-    color: aliceblue;
-    background: rgb(93, 48, 134);
+#start-button {
+  color: aliceblue;
+  background: rgb(93, 48, 134);
 }
 
 img {
-    max-height: 250px;
-    width: auto;
-  }
-  
+  max-height: 250px;
+  width: auto;
+}
+
 #answer {
-    text-align: center;
-  
-  }
-  
+  text-align: center;
+
+}
+
 #question {
-    text-align: center;
-    font-weight: bold;
-  }
+  text-align: center;
+  font-weight: bold;
+}
+
+#timeLeft {
+  text-align: center;
+}
+
+.answerChoice:hover {
+  border: black;
+  border-style: double;
+  border-width: 5px;
+  cursor: pointer; 
+  background: grey;
+}
