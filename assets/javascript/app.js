@@ -2,49 +2,57 @@ var options = [
     {
         question: "Colorado ranked _ nationally in craft breweries per capita?",
         choice: ["13", "3", "11", "5"],
-        answer: 1,
+		answer: 1,
+		image: "assets/images/3rd.jpg",
         
     },
     {
         question: "What popular soda beverage was originally developed as a mixer for whiskey?",
         choice: ["Mountain Dew", "Sprite", "7-UP", "Coke"],
 		answer: 0,
-
+		image: "assets/images/Dew_images.jpg",
 	},
 	{
 		question: "Dry Dock Brewing Co. is located in what city?",
 		choice: ["Longmont", "Arvada", "Golden", "Aurora"],
 		answer: 3,
+		image: "assets/images/DryDock.jpg",
 	},
 	{
 		question: "In what state is it illegal to take more than 3 sips of beer while standing?",
 		choice: ["California", "Arizona", "Iowa", "Texas"],
 		answer: 3,
+		image: "assets/images/Texas.jpg",
 	},
 	{
 		question: "It's against the law to sit on the curb in St. Louis while drinking beer from a ______?",
 		choice: ["bucket", "paper bag", "can", "bottle"],
 		answer: 0,
+		image: "assets/images/bucket.jpg",
 	}, 
 	{
 		question: "In the 1830's the average American age 15 or older drank about __ gallons of beer every year?",
 		choice:	["17", "27", "7", "21"],
 		answer: 1,
+		image: "assets/images/gallons.png",
 	},
 	{
 		question: "A barrel of beer in the U.S. holds __ gallons?",
 		choice: ["31", "28", "25", "21"],
 		answer: 0,
+		image: "assets/images/barrel.jpg",
 	}, 
 	{
 		question: "What year was beer by the bottle available?",
 		choice: ["1932", "1950", "1895", "1850"],
 		answer: 3,
+		image: "assets/images/1850.jpg",
 	},
 	{
 		question: "What year was beer first available in a can?",
 		choice: ["1935", "1923", "1925", "1915"],
 		answer: 0,
+		image: "assets/images/1935.jpg",
 	}];
 
 
@@ -95,7 +103,7 @@ var options = [
 		$("#timeLeft").text("Time remaining: " + timer);
 		timer--;
 	
-		//stop timer if reach 0 //bandaid to display 0 whne timeout 
+		//stop timer if reach 0 //bandaid to display 0 when timeout 
 		if (timer === -1) {
 			stop();
 			unanswer++;
@@ -152,23 +160,23 @@ var options = [
 	
 	
 	function hidepicture() {
-		// $("#answer").append("<img src=" + pick.photo + ">");
+		$("#answer").append("<img src=" + pick.image + ">");
 		holder.push(pick);
 		options.splice(question, 1);
 	
-		var hidpic = setTimeout(function () {
+		setTimeout(function () {
 			$("#answer").empty();
 			timer = 20;
 	
 			//run the score screen if all questions answered
 			if ((wrong + correct + unanswer) === questionCount) {
+				$("#timeLeft").hide();
 				$("#question").empty();
 				$("#question").html("<h3>Game Over!  Here's your stats: </h3>");
 				$("#answer").append("<h4> Correct: " + correct + "</h4>");
 				$("#answer").append("<h4> Incorrect: " + wrong + "</h4>");
 				$("#answer").append("<h4> Unanswered: " + unanswer + "</h4>");
 				$("#reset").show();
-				$("timer").hide();
 				correct = 0;
 				wrong = 0;
 				unanswer = 0;

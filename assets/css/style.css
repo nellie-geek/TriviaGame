@@ -1,7 +1,3 @@
-#container {
-  background: rgb(236, 234, 234);
-}
-
 #start-button {
   color: aliceblue;
   background: rgb(93, 48, 134);
@@ -30,15 +26,16 @@
 #timeLeft {
   text-align: center;
   font-size: 28px;
-  background: black;
+  background: rgba(62, 49, 129, 0.418);
   color: whitesmoke;
-  
+  margin-left: 350px;
+  margin-right: 350px;
 }
 
 .answerChoice:hover {
-  border: black;
+  border: rgb(65, 129, 145);
   border-style: double;
   border-width: 3px;
   cursor: pointer; 
-  background: grey;
+  background: rgb(184, 182, 182);
 }
