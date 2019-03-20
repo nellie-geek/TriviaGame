@@ -6,4 +6,4 @@ Start - displays question and multiple choice answers; upon answer selection use
 run out. Stats will display pon completion of all questions. Game has reset feature to allow use to play again without refreshing the 
 browser. 
 
-View and test your knowledge at: 
+View and test your knowledge at: https://nellie-geek.github.io/TriviaGame/
